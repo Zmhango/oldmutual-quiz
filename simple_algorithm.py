@@ -1,4 +1,4 @@
-import time  # Used to measure how long the sort takes
+import time  
 
 # Function that sorts the list using Bubble Sort
 def bubble_sort(numbers):
@@ -18,7 +18,7 @@ def bubble_sort(numbers):
     return comparisons, swaps
 
 # Main program
-print("===== BUBBLE SORT ALGORITHM =====")
+print("================================||||||  BUBBLE SORT ALGORITHM  ||||||=================================")
 
 # Ask the user to enter numbers
 user_input = input("Enter numbers separated by spaces: ")

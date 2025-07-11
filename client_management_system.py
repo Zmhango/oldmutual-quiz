@@ -21,7 +21,7 @@ def view_clients():
         print(f"ID: {client['id']} | Name: {client['name']} | Fund: {client['fund']}")
     print(f"Total clients: {len(clients)}\n")
 
-# Function to search for clients by name or ID
+# Function to search for a client
 def search_client():
     term = input("Enter search term: ").lower()
     results = [c for c in clients if term in c["name"].lower() or term in c["id"].lower()]
@@ -39,8 +39,8 @@ def edit_client():
     for client in clients:
         if client["id"] == client_id:
             print(f"Current details - ID: {client['id']} | Name: {client['name']} | Fund: {client['fund']}")
-            new_name = input("Enter new name (press Enter to keep current): ")
-            new_fund = input("Enter new Fund (press Enter to keep current): ")
+            new_name = input("Enter new name (Enter to keep current Name): ")
+            new_fund = input("Enter new Fund (Enter to keep current Fund): ")
             if new_name:
                 client["name"] = new_name
             if new_fund:
@@ -66,7 +66,7 @@ def delete_client():
 # Main menu loop
 def main():
     while True:
-        print("===================================== CLIENT MANAGEMENT SYSTEM ===========================================")
+        print("=======================================||||||||| CLIENT MANAGEMENT SYSTEM |||||||||=============================================")
         print("1. Add Client")
         print("2. View All Clients")
         print("3. Search Client")
@@ -92,6 +92,5 @@ def main():
         else:
             print("Option Invalid, Try Again.\n")
 
-# Run the program
 if __name__ == "__main__":
     main()
